@@ -65,13 +65,13 @@ Power and modulation values go **from 0 (minimum) to 255 (maximum)**
 
 You can define band slices at this menu
 
-<img src="./doc/bandslice.png" alt="Band slice" width="200"/>
+<img src="./doc/bandslice.png" alt="Band slice" width="400"/>
 
 Let's say that you define the `SAT band slice` start at `230Mhz` and with a spacing of `6`
 
 Then at the power levels, each slice would be this equivalent at Mhz
 
-<img src="./doc/powerlevel.png" alt="Power levels" width="200"/>
+<img src="./doc/powerlevel.png" alt="Power levels" width="400"/>
 
 - Slice 1 -> <=230Mhz + 6 * 0 = **230Mhz**
 - Slice 2 -> 230Mhz + 6 * 1 = **236Mhz**
