@@ -10,7 +10,7 @@ To run it, please follow this instructions:
 
 1 - Make sure you have a **recent** version Chirp. You can download the latest version from its [official site](https://chirpmyradio.com/projects/chirp/wiki/Download#)
 
-2 - Download the kg-uv970p driver from [here](https://github.com/SatcomRadio/wouxun_kguv970p_chirp_driver/blob/main/kgm70.py)
+2 - Download the kg-uv970p driver from [here](https://github.com/SatcomRadio/wouxun_kguv970p_chirp_driver/blob/main/kguv970p.py)
 
 You need to press this button to download the file
 
