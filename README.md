@@ -61,6 +61,7 @@ You need to press this button to download the file
 ## Band slices
 
 Modulation, power levels and RX adjustments are based on band slices.  
+Power and modulation values go **from 0 (minimum) to 255 (maximum)**
 
 You can define band slices at this menu
 
